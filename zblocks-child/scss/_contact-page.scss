@@ -1,0 +1,30 @@
+.contact-page__multi-location-row {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-quart;
+}
+
+.contact-page-2col__map {
+  height: 300px;
+  margin-bottom: 1em;
+}
+
+.contact-multi__map {
+  height: 300px;
+}
+
+.contact-multi__map iframe,
+.contact-page-2col__map iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: $lg) {
+  .contact-page-2col__map {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: $lg) {
+  .contact-page-2col__map {
+    height: 400px;
+  }
+}

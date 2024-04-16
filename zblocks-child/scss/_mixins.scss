@@ -1,0 +1,84 @@
+/* Stacking Order */
+@mixin layer-behind {
+  z-index: -1;
+}
+@mixin layer-0 {
+  z-index: 0;
+}
+@mixin layer-1 {
+  z-index: 10;
+}
+@mixin layer-2 {
+  z-index: 20;
+}
+@mixin layer-3 {
+  z-index: 30;
+}
+@mixin layer-4 {
+  z-index: 40;
+}
+@mixin layer-5 {
+  z-index: 50;
+}
+@mixin layer-menu {
+  z-index: 90;
+}
+@mixin layer-dimmer {
+  z-index: 100;
+}
+@mixin layer-modal {
+  z-index: 110;
+}
+@mixin ease {
+  transition: all 0.3s ease-in-out;
+}
+@mixin ease-2 {
+  transition: all 0.75s ease-in-out;
+}
+@mixin font-header {
+  font-family: $font-header;
+  font-weight: $font-header-weight;
+}
+@mixin font-body {
+  font-family: $font-body;
+  font-weight: $font-body-weight;
+}
+@mixin horz-border-txt {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    width: auto;
+    height: 2px;
+    margin-bottom: 9px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    margin-right: 0.7em;
+  }
+
+  &::after {
+    margin-left: 0.7em;
+  }
+}
+@mixin margin-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -15px;
+
+  & > * {
+    margin: 0 15px 15px;
+  }
+  @media (min-width: $xl) {
+    flex-wrap: nowrap;
+  }
+}

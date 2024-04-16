@@ -1,0 +1,412 @@
+@import "_variables";
+@import "_mixins";
+
+html {
+  font-size: 9px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+@media (min-width: $md) {
+  html {
+    font-size: 10px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  font-weight: $font-body-weight;
+  font-size: $f7;
+  font-family: $font-body;
+  line-height: 1.5;
+  background-color: $bg-color;
+  color: $color-copy;
+  overflow-x: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.no-focus-outline a:focus,
+.no-focus-outline button:focus {
+  outline: none;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 36px;
+  overflow-x: hidden;
+  @media (min-width: $md) {
+    padding-bottom: 0;
+  }
+  @media (min-width: $xl) {
+    overflow-x: initial;
+  }
+}
+
+.page-template-zblocks-page .entry-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+:focus {
+  outline: 2px dotted $color-prime;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+}
+
+video {
+  display: block;
+}
+
+b,
+strong {
+  font-weight: $bold;
+}
+
+b em,
+em b,
+em strong,
+strong em {
+  font-style: normal;
+}
+
+.blockquote,
+blockquote {
+  padding-left: 1em;
+  margin-bottom: 1.5em;
+  border-left: 4px solid $color-prime;
+  font-size: 1.25em;
+}
+
+a {
+  text-decoration: underline;
+  color: $link-color;
+  transition: all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover {
+  color: $link-hover;
+}
+
+a:visited {}
+
+a:active {
+  text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+  filter: brightness(110%);
+}
+
+button {
+  padding: 0;
+  border: 0;
+}
+
+[href^="tel:"] {
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum=1";
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+@media (min-width: $xl) {
+  [href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+[href^="mailto:"] {
+  text-decoration: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+  position: absolute;
+  left: -9999px;
+}
+
+::-webkit-details-marker {
+  display: none;
+}
+
+.home .breadcrumbs-container {
+  display: none;
+}
+
+.breadcrumbs {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  font-weight: 400;
+  font-size: $f8;
+  line-height: 1.125;
+  border-bottom: 1px solid $color-quint;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: $xl) {
+  .breadcrumbs {
+    white-space: nowrap;
+  }
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+dl,
+ol,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+// Hide empy <p> tags
+
+p:empty {
+  display: none;
+}
+// Headline Styles
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.headline,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+  font-weight: $font-header-weight;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: $color-second;
+
+  b,
+  strong {
+    font-weight: $font-header-weight;
+  }
+
+  em,
+  i {
+    font-style: normal;
+  }
+}
+@media (max-width: #{$sm} - 1) {
+  // Hides manual line breaks in titles to prevent awkward line breaks below xl size
+  .headline br {
+    display: none;
+  }
+}
+
+.h1,
+h1 {
+  font-size: $f1;
+}
+
+.h2,
+h2 {
+  font-size: $f2;
+}
+
+.h3,
+h3 {
+  font-size: $f3;
+}
+
+.h4,
+h4 {
+  font-size: $f4;
+}
+
+.h5,
+h5 {
+  font-size: $f5;
+}
+
+.h6,
+h6 {
+  font-size: $f6;
+}
+// Blog Styles
+// Parent Theme Overrides
+
+.lead {
+  font-size: 1.25em;
+}
+
+.home .entry-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+h2.entry-title {
+  border-bottom: 0;
+}
+
+h3.widget-title {
+  font-size: $f5;
+}
+@media (min-width: 768px) {
+  h3.widget-title {
+    font-size: $f3;
+  }
+}
+
+figure {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: initial;
+  vertical-align: middle;
+  border-style: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#content.site-content {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  outline: none;
+}
+@media (min-width:768px) {
+  #content.site-content {
+    margin-bottom: 40px;
+  }
+}
+
+.home #content.site-content,
+.page-template-zblocks-page #content.site-content {
+  margin-bottom: 0;
+}
+
+h1 {
+  padding-bottom: 0;
+}
+
+.entry-title a {
+  text-decoration: none;
+}
+// Hides captcha badge
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+// Makes lg container size same width as col-xl-10 to simplify image sizes
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 950px;
+  }
+}
+// Styles ported from parent theme since we are no longer loading those styles
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  height: auto;
+  left: 0.313rem;
+  line-height: normal;
+  padding: 0.938rem 1.438rem 0.875rem;
+  text-decoration: none;
+  top: 0.313rem;
+  width: auto;
+  z-index: 100000;
+}
+@import "_menu"; // Menu Styless
+@import "_header"; // Header Style
+@import "_blocks"; // Block Styles
+@import "_sidebar"; // Sidebar Styles
+@import "_footer"; // Footer Styles
+@import "_blog"; // Blog Styles
+@import "_reviews"; // Review page Styles
+@import "_contact-page";
+@import "_team-page";
+@import "_video-page";
+@import "_bio-page"; // Attorney bio page Styles
+@import "_results";
+@import "_gallery-page"; // Gallery post type styles
+@import "_popup";
+@import "_gforms"; // Gravity forms
+@import "_components"; // Components Styless
+@import "_utilities"; // Utilities
+@import "_custom"; // Styles specific to this site only
+@import "_swiper"; // Swiper carousel styles
+// Displays the site once all CSS is loaded
+
+html {
+  visibility: visible;
+  opacity: 1;
+}

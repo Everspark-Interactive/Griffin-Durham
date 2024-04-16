@@ -1,0 +1,631 @@
+.menu--bg-prime {
+  background-color: $color-prime;
+}
+
+.menu--bg-second {
+  background-color: $color-second;
+}
+
+.menu--bg-tert {
+  background-color: $color-tert;
+}
+
+.menu-item--white > .menu-item > .menu-link {
+  color: #fff;
+}
+
+.menu-item--copy > .menu-item > .menu-link {
+  color: $color-copy;
+}
+
+.menu-item--prime > .menu-item > .menu-link {
+  color: $color-prime;
+}
+
+.menu-item--second > .menu-item > .menu-link {
+  color: $color-second;
+}
+
+.menu-item--tert > .menu-item > .menu-link {
+  color: $color-tert;
+}
+/*
+.menu-item--white.navbar-toggler {
+  color: #fff;
+}
+
+.menu-item--copy.navbar-toggler {
+  color: $color-copy;
+}
+
+.menu-item--prime.navbar-toggler {
+  color: $color-prime;
+}
+
+.menu-item--second.navbar-toggler {
+  color: $color-second;
+}
+
+.menu-item--tert.navbar-toggler {
+  color: $color-tert;
+}*/
+.full-menu {
+  display: flex;
+  padding: 0;
+  margin: 0 -1.2em;
+}
+
+.full-menu > .menu-item {
+  flex: 0 1 auto;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @media (min-width: $lg) {
+    align-self: center;
+    line-height: 1.2;
+    text-align: center;
+  }
+  @media (min-width: $xl) {
+    line-height: 60px;
+  }
+}
+
+.fixed-menu > .menu-item {
+  @media (min-width: $xl) {
+    line-height: 50px;
+  }
+}
+
+.full-menu > .menu-item > .menu-link {
+  @media (min-width: $lg) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  @media (min-width: $xl) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.menu-item {
+  position: relative;
+  list-style: none;
+}
+
+.menu-link {
+  display: inline-block;
+  width: 100%;
+  padding-left: 0.95em;
+  padding-right: 0.95em;
+  text-decoration: none;
+}
+
+.full-menu .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+}
+// Makes last menu item sub-menu pop out to right if it has one
+
+.full-menu > li:last-child > .sub-menu,
+.full-menu > li:nth-last-child(2) > .sub-menu {
+  right: 0;
+  left: inherit;
+}
+
+.full-menu > li:last-child > .sub-menu .sub-menu,
+.full-menu > li:nth-last-child(2) > .sub-menu .sub-menu {
+  left: initial;
+  right: 100%;
+}
+// Drop-downs
+
+.menu-item-has-children > a::after {
+  content: "\f067";
+  margin-left: 0.5em;
+  font-family: $font-icon;
+  line-height: 1;
+  color: $color-prime;
+  @include ease;
+}
+
+.menu-item-has-children > a:focus-within::after,
+.menu-item-has-children > a:focus::after,
+.menu-item-has-children > a:hover::after,
+.menu-item-has-children:focus-within > a::after,
+.menu-item-has-children:hover > a::after {
+  color: inherit;
+}
+
+.full-menu .sub-menu {
+  min-width: 315px;
+  padding: 0.5rem;
+  border: 1px solid #fcfcfc;
+  margin-top: 0;
+  background: $bg-color;
+  box-shadow: 10px 10px 25px rgba(0,0,0,.15);
+  opacity: 0;
+  z-index: 90;
+}
+
+.sub-menu .menu-item {
+  @include font-body;
+  font-size: $f7;
+  line-height: 1.2;
+}
+
+.sub-menu .menu-link {
+  padding: 10px;
+  text-align: left;
+  text-transform: none;
+  color: $color-copy;
+}
+
+.full-menu .sub-menu .sub-menu {
+  left: 100%;
+  top: -5px;
+}
+
+.menu-item-has-children:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.menu-item:hover > .menu-link,
+.menu-link:focus,
+.menu-link:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+.menu-hover-bg--prime {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-prime;
+  }
+}
+
+.menu-hover-bg--second {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-second;
+  }
+}
+
+.menu-hover-bg--tert {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-tert;
+  }
+}
+
+.menu-hover-bg--quart {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-quart;
+  }
+}
+
+.menu-hover-bg--quin {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-quin;
+  }
+}
+
+.menu-hover-txt--prime {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-prime;
+  }
+}
+
+.menu-hover-txt--second {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-second;
+  }
+}
+
+.menu-hover-txt--tert {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-tert;
+  }
+}
+
+.menu-hover-txt--quart {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-quart;
+  }
+}
+
+.menu-hover-txt--white {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: #fff;
+  }
+}
+
+.menu-hover-txt--copy {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-copy;
+  }
+}
+
+.menu-hover-txt--quin {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    color: $color-quin;
+  }
+}
+
+.sub-menu .menu-link:focus,
+.sub-menu .menu-link:hover {
+  outline: none;
+  text-decoration: none;
+}
+// Add menu-border-hover class to menu_class php argument to change hover from background color to border-bottom
+
+.menu-border-hover {
+  margin: 0 -0.25em;
+}
+
+.menu-border-hover > .menu-item > .menu-link {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  padding-bottom: 0.25em;
+  border-bottom: 4px solid transparent;
+  line-height: 1.2;
+}
+
+.menu-border-hover > .menu-item > .menu-link:focus,
+.menu-border-hover > .menu-item > .menu-link:hover,
+.menu-border-hover > .menu-item:hover > .menu-link {
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-hover-bg--prime.menu-border-hover {
+  .menu-item > .menu-link:focus,
+  .menu-item > .menu-link:hover,
+  .menu-item:hover > .menu-link {
+    border-color: $color-prime;
+  }
+}
+
+.menu-hover-bg--second.menu-border-hover {
+  .menu-item > .menu-link:focus,
+  .menu-item > .menu-link:hover,
+  .menu-item:hover > .menu-link {
+    border-color: $color-second;
+  }
+}
+
+.menu-hover-bg--tert.menu-border-hover {
+  .menu-item > .menu-link:focus,
+  .menu-item > .menu-link:hover,
+  .menu-item:hover > .menu-link {
+    border-color: $color-tert;
+  }
+}
+
+.menu-hover-bg--quart.menu-border-hover {
+  .menu-item > .menu-link:focus,
+  .menu-item > .menu-link:hover,
+  .menu-item:hover > .menu-link {
+    border-color: $color-quart;
+  }
+}
+
+.menu-hover-bg--quin.menu-border-hover {
+  .menu-item > .menu-link:focus,
+  .menu-item > .menu-link:hover,
+  .menu-item:hover > .menu-link {
+    border-color: $color-quin;
+  }
+}
+@supports (-moz-appearance:meterbar) or (-webkit-appearance:none) {
+  .menu-item-has-children:focus-within > .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  .menu-item:focus-within > .menu-link,
+  .sub-menu .menu-item:focus-within > .menu-link {
+    outline: none;
+  }
+}
+// Fixed menu and sub menu hover styles
+
+.fixed-menu {
+  .menu-item:hover > .menu-link,
+  .menu-link:focus,
+  .menu-link:hover {
+    background: $color-second;
+    color: #fff;
+  }
+
+  .menu-item-has-children > a::after {
+    color: inherit;
+  }
+}
+
+.sub-menu .menu-item:hover > .menu-link,
+.sub-menu .menu-link:focus,
+.sub-menu .menu-link:hover {
+  background-color: $color-prime;
+  color: #fff !important;
+}
+
+.sub-menu {
+  .menu-item-has-children > a::after {
+    color: inherit;
+  }
+}
+/* Popup menu styles */
+.popup-nav__content .menu {
+  background: transparent;
+}
+
+.navbar-toggler {
+  padding: 0.35em 0.5em;
+  border: 0;
+  background-color: $color-prime;
+  color: #fff;
+}
+
+.navbar-toggler::before {
+  content: "\f0c9";
+  font-weight: 300;
+  font-family: $font-icon;
+  margin-right: 0.25em;
+}
+
+.locked {
+  -webkit-overflow-scrolling: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popup-nav__overlay {
+  -webkit-overflow-scrolling: auto;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: 0.5s;
+  //transition: 0.5s;
+  overflow-x: hidden;
+}
+
+.popup-nav__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.closebtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 42px;
+  line-height: 0.9;
+  text-decoration: none;
+  text-align: center;
+  background: transparent;
+  background-color: $color-prime;
+  color: #fff;
+  z-index: 90;
+}
+
+.locked .closebtn {
+  display: inline-block;
+}
+
+.closebtn:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: $color-prime;
+}
+
+.mobile-menu {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.mobile-menu .menu {
+  flex-direction: column;
+}
+
+.mobile-menu > ul {
+  padding-left: 0;
+}
+
+.mobile-menu > li {
+  margin-right: 15px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.mobile-menu li {
+  list-style: none;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.mobile-menu .menu-item-has-children {
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu .menu-item .sub-menu {
+  padding-left: 0.5em;
+}
+
+.mobile-menu .menu-item .sub-menu .sub-menu {
+  padding-left: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75em 0.5em;
+  font-weight: 400;
+  font-size: $f6;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #fff;
+}
+
+.mobile-menu .menu-item a:focus,
+.mobile-menu .menu-item:focus-within a {
+  background: transparent;
+}
+
+.mobile-menu .sub-menu {
+  opacity: 1;
+}
+// Mobile accordion menu styles
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+
+#cssmenu {
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #ffffff;
+}
+
+#cssmenu ul ul {
+  display: none;
+}
+
+.align-right {
+  float: right;
+}
+
+#cssmenu > ul > li > a {
+  padding: 15px 10px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+#cssmenu > ul > li > a:focus,
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li.open > a {
+  background-color: transparent;
+  color: #eeeeee;
+}
+
+#cssmenu > ul > li.open > a {
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+#cssmenu > ul > li.last > a,
+#cssmenu > ul > li:last-child > a {
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+#cssmenu > ul > li > a:hover > span::after,
+#cssmenu > ul > li.active > a > span::after,
+#cssmenu > ul > li.open > a > span::after {
+  border-color: #eeeeee;
+}
+
+#cssmenu ul ul li a {
+  cursor: pointer;
+  padding: 15px calc(10px + .5em);
+  z-index: 1;
+  font-size: 18px;
+  text-transform: none;
+  text-decoration: none;
+  color: #eeeeee;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#cssmenu ul ul li:first-child > a {
+  box-shadow: none;
+}
+
+#cssmenu ul ul ul li:first-child > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#cssmenu ul ul ul li a {
+  padding-left: 1.75em;
+}
+
+#cssmenu > ul > li > ul > li.last > a,
+#cssmenu > ul > li > ul > li:last-child > a {
+  border-bottom: 0;
+}
+
+#cssmenu > ul > li > ul > li.last.open > a,
+#cssmenu > ul > li > ul > li.open:last-child > a {
+  border-bottom: 1px solid #32373e;
+}
+
+#cssmenu > ul > li > ul > li.open:last-child > ul > li:last-child > a {
+  border-bottom: 0;
+}
+
+#cssmenu li.has-sub > a::after {
+  content: "\f107";
+  margin-left: 7px;
+  font-family: "Font Awesome 5 Pro";
+  line-height: 1;
+}
+
+#cssmenu ul ul li > a:hover::after,
+#cssmenu ul ul li.active > a::after,
+#cssmenu ul ul li.open > a::after {
+  border-color: #ffffff;
+}

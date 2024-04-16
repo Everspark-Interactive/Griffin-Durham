@@ -1,0 +1,170 @@
+/* makes the apex chat mobile button cover the "contact" button in the footer sticky nav, make sure to change contact to chat and update the icon if apex chat is used */
+@media (max-width: 767px) {
+  #apexchat_chatbar_sidebar {
+    width: 33% !important;
+    height: 42px !important;
+    left: initial !important;
+    right: 0 !important;
+    opacity: 0 !important;
+  }
+}
+
+.footer-main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid $color-quint;
+  margin-top: auto;
+  @media (min-width: $xl) {
+    padding: 40px 0;
+  }
+}
+
+.home .footer-main,
+.page-template-zblocks-page .footer-main {
+  border: none;
+}
+
+.footer-logo {
+  width: 180px;
+  height: auto;
+}
+
+.footer-social {
+  .social-ico-row {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 1em;
+  }
+
+  .social-ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border: 2px solid $color-prime;
+    color: $color-second;
+
+    &:focus,
+    &:hover {
+      background-color: $color-prime;
+      color: #fff;
+    }
+  }
+  @media (min-width: $xl) {
+    .social-ico-row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    .social-ico {
+      margin: 0 5px;
+    }
+  }
+}
+
+.footer-main a {
+  text-decoration: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, .50);
+  z-index: 90;
+}
+
+.mobile-nav__link {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.65em 0;
+  border-radius: 0;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-radius: 0;
+  border-left: 1px solid rgba(255,255,255,.50);
+  border-right: 1px solid rgba(255,255,255,.50);
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
+  background: $color-prime;
+  color: #fff;
+}
+// This adds extra space to the bottom of the buttons for iPhone X's Home Indicator bar
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
+  .mobile-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.mobile-nav__link:focus {
+  outline: 1px #fff;
+  color: #fff;
+}
+
+.modal-dialog--call {
+  top: 50%;
+  transform: translateY(-50%) !important;
+}
+
+.modal-body--call {
+  line-height: 1.2;
+}
+
+.footer__multi-locations {
+  margin-top: auto;
+}
+
+.footer__multi-locations + .footer-main {
+  margin-top: 0;
+}
+
+.footer__multi-loc-map {
+  height: 150px;
+}
+
+.footer__multi-loc-map iframe {
+  height: 100%;
+  border: 1px solid $color-prime;
+}
+
+.footer__zola-logo {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+}
+
+.footer__zola-logo svg {
+  width: 90px;
+  height: auto;
+}
+
+.ada-notice {
+  background: $color-quint;
+}
+
+.ada-notice__desc {
+  opacity: 0.90;
+}
+@media (max-width: 335px) {
+  .mobile-nav__icon {
+    display: none !important;
+  }
+}
+@media (min-width: $sm) {
+  .ftr__mutli-address-row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .ftr__multi-address {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}

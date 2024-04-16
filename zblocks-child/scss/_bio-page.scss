@@ -1,0 +1,355 @@
+/* Bio page */
+
+.bio-sidebar-custom-info {
+	ul {
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+	
+	li {
+	  position: relative;
+	  list-style: none;
+	  padding-left: 1.25em;
+	  margin-bottom: 0.65em;
+		line-height: 1.2;
+		&::before {
+			  content: "";
+			  position: absolute;
+			  left: 0;
+			  display: inline-block;
+			  width: 8px;
+				height: 8px;
+				border-radius: 50%;
+			  margin-top: 0.5em;
+			  background-color: $color-prime;
+		}
+	}
+}
+
+.header-single-team {
+  position: relative;
+  background-color: $color-prime;
+}
+
+.header-single-team__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-single-team__img-container {
+  height: 390px;
+  background-color: $color-prime;
+  overflow: hidden;
+}
+
+.header-single-team__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.20;
+  filter: blur(4px) saturate(0%);
+}
+
+.content-area--single-team,
+.site-main--single-team,
+.site-main--single-team .type-team,
+.site-main--single-team .type-team > .container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.site-main--single-team .type-team > .container > .row {
+  flex-grow: 1;
+}
+
+.bio-page__entry-header {}
+
+.bio-page__name {
+  line-height: 1.2;
+  color: #fff;
+}
+
+.bio-page__title {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.bio-page__contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bio-page__contact-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.65em;
+  color: #fff;
+}
+
+.bio-page__contact-item {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.bio-page__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bio-page__link:focus,
+.bio-page__link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.bio-page__cell::before,
+.bio-page__email::before,
+.bio-page__fax::before,
+.bio-page__linkedin::before,
+.bio-page__tel::before,
+.bio-page__vcard::before {
+  margin-right: 0.5em;
+  font-family: $icon;
+  font-weight: 900;
+}
+
+.bio-page__tel::before {
+  content: "\f095";
+}
+
+.bio-page__fax::before {
+  content: "\f1ac";
+}
+
+.bio-page__cell::before {
+  content: "\f3cf";
+}
+
+.bio-page__email::before {
+  content: "\f0e0";
+}
+
+.bio-page__vcard::before {
+  content: "\f2bb";
+}
+
+.bio-page__linkedin::before {
+  content: "\f0e1";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.bio-page__sidebar {
+  position: relative;
+  height: 100%;
+  padding: 30px 0;
+  @include layer-0;
+}
+
+.bio-page__sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -60px;
+  display: block;
+  width: calc(100vw + 60px);
+  height: 100%;
+  background-color: $color-quint;
+  opacity: 0.50;
+  @include layer-behind;
+}
+
+.bio-page__img-figure {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  margin-bottom: 30px;
+  @include layer-1;
+}
+
+.bio-page__figure--placeholder {
+  background: $color-quint;
+}
+
+.bio-page__figure--placeholder::after {
+  content: "\f332";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-family: $font-icon;
+  font-weight: 900;
+  font-size: $f1;
+  background-color: $color-prime;
+  color: #fff;
+  @include ease;
+}
+
+.bio-page__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.bio-page__sidebar-content {
+  margin-bottom: 2em;
+}
+
+.bio-page__sidebar-section {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.bio-page__sidebar-content .nav-item {
+  list-style: none;
+  font-size: $f6;
+  line-height: 1.2;
+  margin-bottom: 0.65em;
+}
+
+.bio-page__sidebar-content .nav-link {
+  padding: 0;
+  text-decoration: none;
+}
+
+.bio-page__sidebar-content .nav-link:focus,
+.bio-page__sidebar-content .nav-link:hover {
+  text-decoration: underline;
+  color: $link-hover;
+}
+
+.bio-page__entry-content {
+  margin-bottom: 30px;
+}
+
+.bio-badges__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.bio-badges__item {
+  flex: 0 1 calc(50% - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.bio-badges__item img {
+  width: auto;
+  max-height: 120px;
+}
+@media (min-width: $sm) {
+  .header-single-team__img-container {
+    height: 450px;
+  }
+
+  .header-single-team__content {
+    display: block;
+  }
+
+  .bio-page__img-figure {
+    margin-top: 30px;
+  }
+}
+@media (min-width: $md) {
+  .header-single-team__img-container {
+    height: 540px;
+  }
+
+  .bio-page__sidebar {
+    padding: 60px 0;
+  }
+
+  .bio-badges__item {
+    flex: 0 1 calc(33.3333% - 30px);
+  }
+}
+@media (min-width: $lg) {
+  .header-single-team__img-container {
+    height: 440px;
+  }
+
+  .bio-page__entry-header {
+    padding-top: 140px;
+  }
+
+  .bio-page__img-figure {
+    position: absolute;
+    top: 60px;
+    width: calc(100% - 30px);
+    padding-top: 140%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .bio-page__contact-info {
+    display: block;
+  }
+
+  .bio-page__contact-row {
+    justify-content: initial;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .bio-page__contact-item {
+    flex: 0 1 45%;
+  }
+
+  .bio-page__sidebar {
+    padding: 0;
+  }
+
+  .bio-page__sidebar-content {
+    padding-top: 90px;
+  }
+}
+@media (min-width: $xl) {
+  .header-single-team__img-container {
+    height: 500px;
+  }
+
+  .bio-page__entry-header {
+    padding-top: 160px;
+  }
+
+  .bio-page__img-figure {
+    top: 80px;
+  }
+
+  .bio-page__contact-row {
+    font-size: $f5;
+  }
+
+  .bio-page__sidebar-content {
+    padding-top: 150px;
+  }
+
+  .bio-badges__container {
+    justify-content: space-around;
+  }
+}

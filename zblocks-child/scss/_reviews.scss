@@ -1,0 +1,33 @@
+.review-page-template {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.reivew-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+.review-item__desc {
+  position: relative;
+}
+
+.review-item__desc::before {
+  content: "\0201C";
+  position: absolute;
+  top: -0.2em;
+  left: -0.12em;
+  font-family: Georgia, serif;
+  font-size: 2000%;
+  line-height: 1;
+  color: $color-second;
+  opacity: 0.125;
+  @include layer-0;
+}
+
+.review-page-disclaimer {
+  margin-top: auto;
+}

@@ -1,0 +1,134 @@
+{
+    "key": "group_5e20d7461cdd9",
+    "title": "Page fields",
+    "fields": [
+        {
+            "key": "field_5e20d8afc20b1",
+            "label": "SEO page title",
+            "name": "the_seo_title",
+            "type": "text",
+            "instructions": "If you want to have a clean title to pull into side bar related content links add that as the default page title and add your SEO optimized title here. Will appear as the H1 above the page content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e20d75d9cc76",
+            "label": "Show specific page's child links in side bar",
+            "name": "parent-page-id",
+            "type": "text",
+            "instructions": "If you want to show a specific page's child links in the side bar enter the page ID of the parent page here ( can be found in the URL when editing a page ). This will overwrite the default related page links in the sidebar if your page has any children.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e20d990b5f56",
+            "label": "Category for sidebar recent posts",
+            "name": "category_id_posts",
+            "type": "text",
+            "instructions": "If you want to show a specific category of Blog posts, add the post category slug here. You can add multiple categories separated by a comma.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eb5a8a437a1a",
+            "label": "Hide \"Related Content\" links in sidebar",
+            "name": "hide_related_content_sidebar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ef118aee1792",
+            "label": "Page header image",
+            "name": "page_header_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/zblocks-page.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600371574
+}

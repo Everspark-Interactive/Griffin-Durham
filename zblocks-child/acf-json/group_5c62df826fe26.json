@@ -1,0 +1,113 @@
+{
+    "key": "group_5c62df826fe26",
+    "title": "Footer Options",
+    "fields": [
+        {
+            "key": "field_5fe21cf7caaee",
+            "label": "Enable cookie banner",
+            "name": "enable_cookie_banner",
+            "type": "true_false",
+            "instructions": "If enabled will show a sticky footer at the bottom of the page asking the visitor to acknowledge the site's use of cookies.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fe21d31caaef",
+            "label": "Cookie banner text",
+            "name": "cookie_banner_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fe21cf7caaee",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "This website uses cookies to improve your experience. By using our website, you agree to our <a href=\"\/disclaimer\/\">cookie policy<\/a>.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5c62df926a945",
+            "label": "Alternative footer logo",
+            "name": "firm_logo-footer",
+            "type": "image",
+            "instructions": "If you want to use a different logo for the footer upload here, if not the default logo added to the Firm Info page will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d9f7b6e1a04b",
+            "label": "Advertising disclaimer language",
+            "name": "advertising_disclaimer",
+            "type": "text",
+            "instructions": "Advertising that appears in footer, the default is \"Attorney Advertising\" but some states have different requirements.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Attorney Advertising",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1608654176
+}

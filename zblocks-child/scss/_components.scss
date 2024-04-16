@@ -1,0 +1,662 @@
+// Components
+// Cookie banner
+
+.cookie-banner {
+  position: fixed;
+  bottom: 37px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  line-height: 1.2;
+  background-color: rgba(#000, .90);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  @include layer-menu;
+  @media (min-width: $md) {
+    bottom: 0;
+  }
+  @media (min-width: $xl) {
+    padding: 15px;
+  }
+}
+
+.cookie-banner__desc {
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #fff;
+
+    &:focus,
+    &:hover {
+      text-decoration-color: $color-second;
+    }
+
+    &:focus {
+      outline: 2px dotted #fff;
+    }
+  }
+}
+
+.cookie-banner__close {
+  display: inline-block;
+  padding: 0.65em 1em;
+  font-weight: $bold;
+  font-size: 0.9em;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: $color-prime;
+  color: #fff;
+  cursor: pointer;
+  @include ease;
+
+  &:focus,
+  &:hover {
+    background-color: #fff;
+    color: $color-prime;
+  }
+}
+// [highlight] shortcode styles
+
+.content-highlight {
+  position: relative;
+  padding: 30px 45px;
+  margin-bottom: 3rem;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  @include layer-1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-prime;
+    opacity: 0.07;
+    @include layer-behind;
+  }
+}
+// Modal pop up
+
+.modal {
+  // so it appears over livechat box
+  z-index: 99999999;
+}
+
+.modal-dialog {
+  max-width: 95%;
+  height: auto;
+  margin: auto;
+  @media (min-width: $xl) {
+    width: 100.0rem;
+  }
+}
+
+.modal button.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-shadow: none;
+  background-color: var(--color-prime);
+  color: #fff;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal .close:focus,
+.modal .close:hover {
+  background-color: var(--color-second);
+}
+// Video swap modal
+
+#video-transcript[href=""] {
+  display: none;
+}
+
+.pagination__link a {
+  font-weight: 700;
+  text-decoration: none;
+}
+// Fix for anchor links - update to match header height at each device size
+// when scroll-padding-top has better support remove the anchor-fix & inpage-anchor methods
+/*html {
+  scroll-padding-top: $header-fixed-height; // Set to height of the fixed header
+}*/
+.anchor-fix,
+.inpage-anchor {
+  display: block;
+}
+
+.anchor-fix:before,
+.inpage-anchor:before {
+  content: "";
+  display: block;
+  margin-top: -$header-fixed-height;
+  height: $header-fixed-height;
+  visibility: hidden;
+  vertical-align: top;
+}
+
+html {
+  scroll-padding-top: $header-fixed-height;
+}
+@media (min-width: $sm) {
+  html {
+    scroll-padding-top: $header-fixed-sm-height;
+  }
+
+  .anchor-fix:before,
+  .inpage-anchor:before {
+    margin-top: -$header-fixed-sm-height;
+    height: $header-fixed-sm-height;
+  }
+}
+@media (min-width: $md) {
+  html {
+    scroll-padding-top: $header-fixed-md-height;
+  }
+
+  .anchor-fix:before,
+  .inpage-anchor:before {
+    margin-top: -$header-fixed-md-height;
+    height: $header-fixed-md-height;
+  }
+}
+@media (min-width: $lg) {
+  html {
+    scroll-padding-top: $header-fixed-lg-height;
+  }
+
+  .anchor-fix:before,
+  .inpage-anchor:before {
+    margin-top: -$header-fixed-lg-height;
+    height: $header-fixed-lg-height;
+  }
+}
+@media (min-width: $xl) {
+  html {
+    scroll-padding-top: $header-fixed-xl-height;
+  }
+
+  .anchor-fix:before,
+  .inpage-anchor:before {
+    margin-top: -$header-fixed-xl-height;
+    height: $header-fixed-xl-height;
+  }
+}
+// Boostrap carousel blocks
+
+.carousel-indicators {
+  margin-right: -15px;
+  margin-left: -15px;
+  @media (min-width: $xl) {
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+}
+
+.carousel-indicators--header-slides {
+  margin-bottom: 15px;
+  @media (min-width: $sm) {
+    margin-bottom: 30px;
+  }
+}
+
+#header-carousel .carousel-indicators {
+  @include layer-2;
+}
+
+.carousel-pager {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 4px solid $color-second;
+  border-radius: 50%;
+  background: #fff;
+  transition: $ease;
+  @media (min-width: $xl) {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 3px solid;
+  }
+}
+
+.carousel-pager.active,
+.carousel-pager:focus,
+.carousel-pager:hover {
+  background: $color-prime;
+}
+
+.carousel-block {
+  .carousel-indicators {
+    margin-right: -15px;
+    margin-left: -15px;
+    @media (min-width: $xl) {
+      justify-content: flex-start;
+      margin-right: -5px;
+      margin-left: -5px;
+    }
+  }
+
+  .carousel-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1;
+    background-color: $color-second;
+    color: #fff;
+    transition: $ease;
+    @media (min-width: $xl) {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  .carousel-pager.active,
+  .carousel-pager:focus,
+  .carousel-pager:hover {
+    background: $color-prime;
+  }
+}
+
+.content-block__accordion {
+  position: relative;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $color-quart;
+}
+
+.content-block__accordion[open] {
+  margin-bottom: 1em;
+}
+
+.content-block__accordion-title {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content-block__accordion-title {
+  padding-left: 40px;
+}
+
+.content-block__accordion-title,
+.content-block__accordion-title > * {
+  position: relative;
+  margin-bottom: 0;
+  font-size: $f4;
+  line-height: 1.2;
+  clear: none;
+  @include ease;
+}
+
+.content-block__accordion-title-link {
+  text-decoration: none;
+  color: $color-copy;
+}
+
+.content-block__accordion-title:before {
+  content: "\f107";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-family: $font-icon;
+  font-size: $f6;
+  line-height: 1.5em;
+  text-align: center;
+  background: $color-prime;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-block__accordion-description {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.accordion__link {
+  display: inline-block;
+}
+
+.content-block__accordion-description ol:last-of-type,
+.content-block__accordion-description p:last-of-type,
+.content-block__accordion-description ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-block__accordion-description ol:last-of-type + .accordion__link,
+.content-block__accordion-description p:last-of-type + .accordion__link,
+.content-block__accordion-description ul:last-of-type + .accordion__link {
+  margin-top: 1em;
+}
+
+.content-block__accordion-title:focus,
+.content-block__accordion:focus {
+  outline: none;
+}
+
+.content-block__accordion-title:focus *,
+.content-block__accordion-title:hover * {
+  color: $color-second;
+}
+
+.content-block__accordion-title:focus-within:before,
+.content-block__accordion:focus .content-block__accordion-title:before,
+.content-block__accordion:hover .content-block__accordion-title:before,
+.content-block__accordion[open] .content-block__accordion-title:before {
+  background: $color-second;
+  transform: rotate(-90deg);
+}
+
+.content-block__accordion[open] .content-block__accordion-title,
+.content-block__accordion[open] .content-block__accordion-title > * {
+  color: $color-second;
+}
+
+.content-block__accordion[open] .content-block__accordion-title ~ * {
+  animation: accordion-fade-in 0.3s ease-in-out;
+}
+@keyframes accordion-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+// Stylized list item bullets
+
+.content-area {
+  ul:not([class]) {
+    padding-left: 0;
+  }
+
+  ul li:not([class]):not(:last-child) {
+    margin-bottom: 0.45em;
+  }
+
+  ul li:not([class]) {
+    position: relative;
+    list-style: none;
+    padding-left: 1.5em;
+
+    ul:not([class]) {
+      margin-top: 0.25em;
+    }
+
+    &::before {
+      content: "\f101";
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 18px;
+      font-family: $font-icon;
+      font-weight: 400;
+      color: $color-second;
+    }
+  }
+}
+@media (min-width: $lg) {
+  .content-area .two-col-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-area .two-col-list li {
+    flex: 0 0 45%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 0;
+  font-size: $f6;
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
+  background: $color-prime;
+  color: #fff;
+  transition: $ease;
+}
+
+.btn:focus,
+.btn:hover {
+  text-decoration: none;
+  background: $color-second;
+  color: #fff;
+}
+
+.btn--second {
+  background: $color-second;
+  color: #fff;
+}
+
+.btn--second:focus,
+.btn--second:hover {
+  background: $color-prime;
+  color: #fff;
+}
+
+.btn--white,
+.content-block.color-white .btn {
+  background: #fff;
+  color: $color-prime;
+}
+
+.btn--white:focus,
+.btn--white:hover,
+.content-block.color-white .btn:focus,
+.content-block.color-white .btn:hover {
+  background: $color-second;
+  color: #fff;
+}
+
+.btn--ghost {
+  padding: 0.3em 1.5em;
+  border: 4px solid $color-prime;
+  background: transparent;
+  color: $color-prime;
+}
+
+.btn--ghost-white {
+  padding: 0.3em 1.5em;
+  border: 4px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn--ghost:focus,
+.btn--ghost:hover {
+  border-color: $color-second;
+  background: $color-second;
+}
+
+.reverse-child-links a,
+.reverse-link {
+  color: #fff;
+}
+// Adds a border to the left and right of the headline text that is veritcally centered
+
+.headline-horz-border {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    width: auto;
+    height: 3px;
+    margin-top: 2px;
+    background-color: $color-second;
+  }
+
+  &::before {
+    margin-right: 0.5em;
+  }
+
+  &::after {
+    margin-left: 0.5em;
+  }
+}
+// Adds a border extending out from the headline to the left page margin
+
+.headline__left-border {
+  position: relative;
+}
+
+.headline__left-border::before {
+  content: "";
+  position: absolute;
+  top: 0.58em;
+  left: calc(-200% - 15px);
+  display: block;
+  width: 200%;
+  height: 3px;
+  background: $color-tert;
+}
+
+.headline__right-border {
+  position: relative;
+  display: inline-block;
+}
+
+.headline__right-border:before {
+  content: "";
+  position: absolute;
+  top: 0.58em;
+  right: calc(-200% - 15px);
+  display: block;
+  width: 200%;
+  height: 3px;
+  background: $color-tert;
+}
+@media (min-width: $xl) {
+  .headline__right-border:before {
+    right: calc(-200% - 30px);
+  }
+
+  .headline__left-border:before {
+    left: calc(-200% - 30px);
+  }
+}
+
+.social-ico-row {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+
+.social-ico {
+  display: inline-flex;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-family: "Font Awesome 5 Brands";
+  text-decoration: none;
+
+  &--fb::before {
+    content: "\f09a";
+  }
+
+  &--twitter::before {
+    content: "\f099";
+  }
+
+  &--linkedin::before {
+    content: "\f0e1";
+  }
+
+  &--youtube::before {
+    content: "\f167";
+  }
+
+  &--google::before {
+    content: "\f1a0";
+  }
+
+  &--insta::before {
+    content: "\f16d";
+  }
+
+  &--yelp::before {
+    content: "\f1e9";
+  }
+}
+
+.social-ico svg {
+  width: 0.95em;
+  height: 0.95em;
+}
+
+.social-ico path {
+  fill: inherit;
+  @include ease;
+}
+
+.social-ico:focus path,
+.social-ico:hover path {
+  fill: inherit;
+}
+
+.social-ico:focus,
+.social-ico:hover {
+  text-decoration: none;
+}
+
+.admin-footer {
+  display: none;
+}
+@media (min-width: 992px) {
+  .admin-footer {
+    display: block;
+    position: fixed;
+    right: -10px;
+    top: 50%;
+    transform: translateX(34%);
+    z-index: 999;
+  }
+
+  .zblocks-edit-post-links {
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(90deg);
+    border: 2px solid $color-prime;
+    background-color: rgba(255,255,255,.90);
+  }
+
+  .zblocks-edit-post-links a {
+    font-weight: $bold;
+    font-size: $f8;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,189 @@
+.sidebar-content {
+  @media (min-width: $xl) {
+    height: 100%;
+    padding-left: 30px;
+  }
+}
+
+.sidebar-sticky {
+  @media (min-width: $xl) and (min-height: $xx) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: $header-fixed-xl-height;
+  }
+}
+
+.sidebar-content__item {
+  margin-bottom: 1.65em;
+}
+
+.sub-page-list {
+  padding-left: 0;
+}
+
+.sub-page-list li {
+  list-style: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid $color-quint;
+  font-weight: 500;
+  font-size: $f7;
+  line-height: 1.2;
+}
+
+.sub-page-list a {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  text-decoration: none;
+  color: $color-copy;
+}
+
+.sub-page-list a::before {
+  content: "\f054";
+  position: relative;
+  left: 0;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-family: "Font Awesome 5 Pro";
+  font-size: 90%;
+  line-height: 30px;
+  text-align: center;
+  background: $color-prime;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  float: left;
+  margin-right: 1em;
+  text-indent: 3px;
+}
+
+.sub-page-list a:focus,
+.sub-page-list a:hover {
+  color: $color-prime;
+}
+
+.sub-page-list a:focus::before,
+.sub-page-list a:hover::before {
+  background: $color-second;
+}
+// sidebar map embed
+
+.sidebar__map-embed iframe {
+  width: 100%;
+  height: 250px;
+}
+
+.sidebar__map-address {
+  line-height: 1.2;
+}
+// Recent posts in sidebar
+
+.widget-title {
+  margin-bottom: 0.25em;
+}
+
+.sidebar-posts-list {
+  padding-left: 0;
+}
+
+.sidebar-posts-list li {
+  list-style: none;
+  font-size: $f6;
+  margin-bottom: 0.5em;
+}
+
+.sidebar-posts-list li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-posts-list a {
+  padding: 0;
+  font-size: $f7;
+  line-height: 1.2;
+  text-decoration: none;
+  color: $color-copy;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+    color: $color-prime;
+  }
+}
+// Related Content
+
+.sidebar__sub-page-list {
+  font-size: $f7;
+}
+// Recent posts
+
+.sidebar__related-posts a {
+  font-size: $f7;
+  line-height: 1.2;
+  text-decoration: none;
+  color: $color-copy;
+}
+
+.sidebar__related-posts a:focus,
+.sidebar__related-posts a:hover {
+  text-decoration: underline;
+  color: $color-prime;
+}
+// Search bar styles
+
+.search-form {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.search-form > label {
+  flex-basis: 100%;
+}
+
+.widget_search .search-form input[type="submit"] {
+  flex-basis: 100%;
+  display: inline-block;
+  letter-spacing: 0;
+}
+
+.search-field {
+  height: 100%;
+  border: 1px solid $color-prime;
+  border-radius: 0;
+  font-size: $f5;
+  transition: $ease;
+}
+
+.search-field:focus {
+  box-shadow: none;
+  border-color: $color-second;
+  box-shadow: inset 0 0 0 1px $color-second;
+}
+
+.search-submit.btn {
+  padding: 0.5em 0.75em;
+  font-size: $f8;
+}
+
+.search-results .entry-summary {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+@media (min-width: $md) {
+  .search-form {
+    flex-wrap: nowrap;
+  }
+
+  .search-form > label {
+    flex-basis: 80%;
+    margin: 0;
+    padding-right: 1em;
+  }
+
+  .widget_search .search-form input[type="submit"] {
+    flex-basis: 20%;
+  }
+}

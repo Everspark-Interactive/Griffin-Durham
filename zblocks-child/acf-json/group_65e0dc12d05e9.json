@@ -1,0 +1,56 @@
+{
+    "key": "group_65e0dc12d05e9",
+    "title": "Feature Attorney",
+    "fields": [
+        {
+            "key": "field_65e0dc0eb921d",
+            "label": "Featured Attorney",
+            "name": "featured_attorney",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "false": "None",
+                "3124": "Jim Durham",
+                "3121": "Daniel Griffin",
+                "3120": "Tom Clarkson",
+                "3138": "Attorney – Tom Clarkson (content cahnged)",
+                "3139": "Attorney - Brian Tanner (Savannah)",
+                "3142": "Attorney – Brian Tanner (Georgia)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709671113
+}

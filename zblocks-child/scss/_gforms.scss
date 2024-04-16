@@ -1,0 +1,185 @@
+// Gravity Form Styles
+
+.gform_wrapper {
+  position: relative;
+  @include layer-0;
+}
+
+.gfield_visibility_hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+label {
+  display: block;
+}
+
+label,
+legend {
+  width: auto;
+  margin-bottom: 0.25em;
+  font-weight: 400;
+  font-size: $f6;
+  text-align: left;
+}
+
+.hidden_label {
+  label,
+  legend {
+    position: absolute;
+    left: -99999px;
+  }
+}
+// Label below first - last name fields
+
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+  display: block;
+  font-size: $f7;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $color-prime;
+  box-shadow: inset 0 0 0 1px transparent;
+  @include ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: $color-second;
+  box-shadow: inset 0 0 0 1px $color-second;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+select {
+  padding: 11.5px 10px;
+  word-wrap: normal;
+}
+// Check boxes
+
+.content-block ul.gfield_checkbox,
+.gfield_checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.gfield_checkbox li {
+  list-style: none;
+  display: flex;
+  flex: 1 1 calc(50% - 10px);
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0.5em;
+  font-size: $f7;
+  line-height: 1.2;
+}
+
+.gfield_checkbox label {
+  margin-bottom: 0;
+}
+
+.gfield_checkbox input {
+  flex-grow: 0;
+  width: initial;
+  margin-top: 0.25em;
+  margin-right: 0.5em;
+}
+// Radio buttons
+
+.gfield_radio {
+  list-style: none;
+  padding-left: 0;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.5em;
+  margin-bottom: 0.125em;
+}
+// ul around form items
+
+.content-area .gform_fields,
+.gform_fields {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+// li around form inputs
+
+.gfield {
+  margin-bottom: 0.5em;
+}
+
+.gfield_required {
+  color: $color-second;
+}
+
+.ginput_complex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.btn--form {
+  width: 100%;
+}
+// Field description
+
+.gfield_description {
+  margin-bottom: 1em;
+  font-size: 0.888888888888889em;
+  line-height: 1.2;
+}
+// Validation warnings
+
+.validation_list {
+  padding-left: 0;
+}
+
+.validation_list a {
+  color: inherit;
+}
+
+.validation_list a:focus,
+.validation_list a:hover {
+  text-decoration: none;
+}
+
+.validation_message {
+  font-weight: $bold;
+  text-transform: uppercase;
+}
+
+.gform_validation_container {
+  position: absolute;
+  left: -9999px;
+}
+// This will put the Phone and Email fields on the same line on the home page
+@media (min-width: $md) {
+  #field_1_2,
+  #field_1_3 {
+    float: left;
+    width: calc(50% - 7.5px);
+  }
+
+  #field_1_2 {
+    margin-right: 7.5px;
+  }
+
+  #field_1_3 {
+    margin-left: 7.5px;
+  }
+}

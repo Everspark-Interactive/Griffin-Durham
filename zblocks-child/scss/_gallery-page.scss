@@ -1,0 +1,51 @@
+// Gallery post type styles
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  @media (min-width: $sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $lg) {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+.gallery-grid__item {
+  position: relative;
+  padding: 0;
+  border: 0;
+  box-shadow: inset 0 0 0 6px transparent;
+  @include ease;
+}
+
+.gallery-grid__item:focus,
+.gallery-grid__item:hover {
+  filter: brightness(110%) saturate(110%);
+}
+
+.gallery-grid__item::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.gallery-grid__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-modal__dialog {
+  img {
+    max-height: 90vh;
+  }
+  @media(min-width: $xl) {
+    width: max-content;
+  }
+}

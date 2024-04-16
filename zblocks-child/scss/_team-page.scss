@@ -1,0 +1,156 @@
+/* Team page */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.team-member__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: $color-copy;
+}
+
+.team-member__link * {
+  transition: $ease;
+}
+
+.team-member__figure {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  margin-bottom: 0;
+  @media (min-width: $lg) {
+    padding-top: (5 / 4) * 100%;
+  }
+}
+
+.team-member__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.60);
+  color: #fff;
+  opacity: 0;
+  @include layer-1;
+  @include ease;
+}
+
+.team-member__hover-text {
+  border: 3px solid #fff;
+  padding: 0.5em 1em;
+  font-size: $f7;
+  letter-spacing: 2px;
+  @include font-header;
+}
+
+.team-member__link:focus .team-member__hover,
+.team-member__link:hover .team-member__hover {
+  opacity: 1;
+}
+
+.team-member__figure--placeholder {
+  background: $color-quint;
+}
+
+.team-member__figure--placeholder::after {
+  content: "\f332";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-family: $font-icon;
+  font-weight: 900;
+  font-size: $f1;
+  background-color: $color-prime;
+  color: #fff;
+  @include ease;
+}
+
+.team-member__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-member__info-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  border-right: 6px solid #fff;
+  padding-right: 24px;
+  background-color: #fff;
+  @media (min-width: $xx) {
+    width: 68.75%;
+    padding-right: 9px;
+  }
+}
+
+.team-member__name {
+  padding: 15px 0;
+  color: $color-copy;
+  @media (min-width: $xl) {
+    padding: 35px 0;
+  }
+}
+
+.team-member__view-profile {
+  display: inline-block;
+  letter-spacing: 1px;
+  border-bottom: 2px solid $color-prime;
+}
+
+.team-member__link:focus,
+.team-member__link:hover {
+  text-decoration: none;
+  color: $color-prime;
+
+  .team-member__figure--placeholder::after,
+  .team-member__figure--placeholder::after {
+    background-color: $color-second;
+  }
+
+  .team-member__info-container {
+    border-color: $color-prime;
+  }
+}
+
+.search-submit--bio.btn {
+  flex: 1 0 0;
+  padding-left: 2.75em;
+  padding-right: 2.75em;
+  font-size: $f6;
+}
+@media (min-width: $sm) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-member__link {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: $lg) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

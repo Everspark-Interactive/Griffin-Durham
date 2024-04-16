@@ -1,0 +1,51 @@
+.entry-meta {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: $f8;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
+.entry-meta a {
+  text-decoration: none;
+}
+
+.blog-page__post {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.blog-page__excerpt img {
+  display: block;
+  margin-bottom: 2em;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-next::after,
+.nav-previous::before {
+  font-family: $icon;
+  font-weight: 400;
+  color: $color-second;
+}
+
+.nav-previous::before {
+  content: "\f100";
+  margin-right: 0.25em;
+}
+
+.nav-next::after {
+  content: "\f101";
+  margin-left: 0.25em;
+}
+
+.pagination {
+  position: relative;
+  justify-content: space-between;
+  @include layer-1;
+}

@@ -1,0 +1,279 @@
+{
+    "key": "group_5e21f4cb98930",
+    "title": "Design options fields",
+    "fields": [
+        {
+            "key": "field_5e21f4d81847c",
+            "label": "Primary color",
+            "name": "color_prime",
+            "type": "color_picker",
+            "instructions": "<strong>Be sure to have a designer review your color choices before presenting changes to a client!<\/strong><br\/>\r\nContrast ratio should be at least 4.5 between text and background colors, or a contrast ratio of at least 3:1 for headline text ( 19px - 23px at bold weight, or 24px and larger ). Use this contrast tool to double check: <a href=\"https:\/\/contrast-ratio.com\/\" target=\"_blank\">https:\/\/contrast-ratio.com\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#261447"
+        },
+        {
+            "key": "field_5e21f4e91847d",
+            "label": "Secondary color",
+            "name": "color_second",
+            "type": "color_picker",
+            "instructions": "<strong>Be sure to have a designer review your color choices before presenting changes to a client!<\/strong><br\/>\r\nContrast ratio should be at least 4.5 between text and background colors, or a contrast ratio of at least 3:1 for headline text ( 19px - 23px at bold weight, or 24px and larger ). Use this contrast tool to double check: <a href=\"https:\/\/contrast-ratio.com\/\" target=\"_blank\">https:\/\/contrast-ratio.com\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ff3864"
+        },
+        {
+            "key": "field_5e21f51f1847e",
+            "label": "Tertiary color",
+            "name": "color_tert",
+            "type": "color_picker",
+            "instructions": "<strong>Be sure to have a designer review your color choices before presenting changes to a client!<\/strong><br\/>\r\nContrast ratio should be at least 4.5 between text and background colors, or a contrast ratio of at least 3:1 for headline text ( 19px - 23px at bold weight, or 24px and larger ). Use this contrast tool to double check: <a href=\"https:\/\/contrast-ratio.com\/\" target=\"_blank\">https:\/\/contrast-ratio.com\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#6a6a6a"
+        },
+        {
+            "key": "field_5e21f5441847f",
+            "label": "Quaternary color",
+            "name": "color_quart",
+            "type": "color_picker",
+            "instructions": "<strong>Be sure to have a designer review your color choices before presenting changes to a client!<\/strong><br\/>\r\nContrast ratio should be at least 4.5 between text and background colors, or a contrast ratio of at least 3:1 for headline text ( 19px - 23px at bold weight, or 24px and larger ). Use this contrast tool to double check: <a href=\"https:\/\/contrast-ratio.com\/\" target=\"_blank\">https:\/\/contrast-ratio.com\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#cccccc"
+        },
+        {
+            "key": "field_5e21f56f18480",
+            "label": "Quinary color",
+            "name": "color_quint",
+            "type": "color_picker",
+            "instructions": "<strong>Be sure to have a designer review your color choices before presenting changes to a client!<\/strong><br\/>\r\nContrast ratio should be at least 4.5 between text and background colors, or a contrast ratio of at least 3:1 for headline text ( 19px - 23px at bold weight, or 24px and larger ). Use this contrast tool to double check: <a href=\"https:\/\/contrast-ratio.com\/\" target=\"_blank\">https:\/\/contrast-ratio.com\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#eeeeee"
+        },
+        {
+            "key": "field_5f47ff5a8d1e2",
+            "label": "Menu options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f47ff878d1e3",
+            "label": "Menu background color",
+            "name": "menu_bg",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-prime": "bg-prime",
+                "bg-second": "bg-second",
+                "bg-tert": "bg-tert",
+                "bg-quart": "bg-quart",
+                "bg-quin": "bg-quin"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f480360d2adb",
+            "label": "Menu text color",
+            "name": "menu_text_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "menu-item--white": "menu-item--white",
+                "menu-item--copy": "menu-item--copy",
+                "menu-item--prime": "menu-item--prime",
+                "menu-item--second": "menu-item--second",
+                "menu-item--tert": "menu-item--tert"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f48120c83d41",
+            "label": "Menu hover style",
+            "name": "menu_hover_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "menu-bg-hover": "menu-bg-hover",
+                "menu-border-hover": "menu-border-hover"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f48065ec8de3",
+            "label": "Menu hover background \/ border color",
+            "name": "menu_hover_bg",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "menu-hover-bg--prime": "menu-hover-bg--prime",
+                "menu-hover-bg--second": "menu-hover-bg--second",
+                "menu-hover-bg--tert": "menu-hover-bg--tert",
+                "menu-hover-bg--quart": "menu-hover-bg--quart",
+                "menu-hover-bg--quin": "menu-hover-bg--quin"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f480f3ad3804",
+            "label": "Menu hover text color",
+            "name": "menu_hover_txt",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "menu-hover-txt--white": "menu-hover-txt--white",
+                "menu-hover-txt--copy": "menu-hover-txt--copy",
+                "menu-hover-txt--prime": "menu-hover-txt--prime",
+                "menu-hover-txt--second": "menu-hover-txt--second",
+                "menu-hover-txt--tert": "menu-hover-txt--tert",
+                "menu-hover-txt--quart": "menu-hover-txt--quart",
+                "menu-hover-txt--quin": "menu-hover-txt--quin"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f48119d38737",
+            "label": "Menu font",
+            "name": "menu_font",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "font-body": "font-body",
+                "font-header": "font-header"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-design"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1598560726
+}

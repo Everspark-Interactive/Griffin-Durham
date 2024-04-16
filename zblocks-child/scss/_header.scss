@@ -1,0 +1,729 @@
+.header-container {
+  position: relative;
+}
+
+.header__home-link {
+  display: block;
+}
+
+.header__logo {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .header__logo {
+    height: $header-logo-height--xl;
+  }
+}
+@media (max-width: 575px) {
+  .header__contact-info {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .header__contact-item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.header__multi-location-container {
+  margin-left: -5px;
+  margin-right: -5px;
+  @media (min-width: $lg) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.header__multi-location-item {
+  margin-left: 5px;
+  margin-right: 5px;
+  @media (min-width: $lg) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.header-contact-row {
+  display: none;
+  @media(min-width: $md) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  @media (min-width: $xl) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.header-contact-row__item {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  @media (min-width: $xl) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.header__address {
+  position: relative;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.header__tel {
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header__tel:hover {
+  text-decoration: none;
+}
+
+.header__free-consult {
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.header__free-consult::before {
+  content: "\f4a3";
+  margin-right: 0.45em;
+  font-family: $icon;
+  font-weight: 900;
+}
+
+.header__free-consult:focus,
+.header__free-consult:hover {
+  text-decoration: none;
+}
+
+.header__bg-container,
+.header__img-container {
+  position: relative;
+}
+
+.header__vid-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__img,
+.header__vid {
+  height: $header-img-height;
+  object-fit: contain;
+}
+@media (min-height: 720px) {
+  .header__img,
+  .header__vid {
+    max-height: $header-img-max-height;
+  }
+}
+@media (min-width: $sm) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--sm;
+  }
+}
+@media (min-width: $md) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--md;
+  }
+}
+@media (min-width: $lg) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--lg;
+  }
+}
+@media (min-width: $xl) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--xl;
+  }
+}
+@media (min-width: $xx) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--xx;
+  }
+}
+@media (min-width: $hd) {
+  .header__img,
+  .header__vid {
+    height: $header-img-height--hd;
+  }
+}
+
+.header-slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.header-slogan__row {
+  height: 100%;
+  padding: 30px 0;
+}
+
+.header-slogan__col {
+  position: relative;
+  display: flex;
+
+  &--vert-center {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &--vert-top {
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+
+  &--vert-bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  &--horz-left {
+    justify-content: flex-start;
+  }
+
+  &--horz-center {
+    justify-content: center;
+  }
+
+  &--horz-right {
+    justify-content: flex-end;
+  }
+  @media (min-width: $md) {
+    &--vert-md-center {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &--vert-md-top {
+      margin-top: 0;
+      margin-bottom: auto;
+    }
+
+    &--vert-md-bottom {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+
+    &--horz-md-left {
+      justify-content: flex-start;
+    }
+
+    &--horz-md-center {
+      justify-content: center;
+    }
+
+    &--horz-md-right {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.header-slogan__content {
+  position: relative;
+  display: inline-block;
+}
+
+.header-slogan__txt {
+  position: relative;
+  margin-bottom: 0;
+  line-height: 1.125;
+  user-select: none;
+}
+
+.header-slogan__caption p:last-child {
+  margin-bottom: 0;
+}
+/*
+// Half / Half header styles
+*/
+.header-half__address,
+.header-half__consult,
+.header-half__tel {
+  line-height: 1.2;
+
+  &::before {
+    content: "";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.45em;
+    border: 2px solid;
+    font-family: $icon;
+    font-weight: 900;
+    font-size: 0.6em;
+    color: $color-second;
+    @include ease;
+    @media (min-width: $lg) {
+      width: 30px;
+      height: 30px;
+      font-size: 0.8em;
+    }
+  }
+}
+
+.header-half__address::before {
+  content: "\f3c5";
+}
+
+.header-half__consult {
+  text-decoration: none;
+
+  &::before {
+    content: "\f075";
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      color: $color-prime;
+    }
+  }
+}
+
+.header-half__tel::before {
+  content: "\f095";
+}
+
+.header-half-menu .container {
+  padding: 0;
+}
+/*
+.header-half-bg *[class*="bg-overlay"]::after {
+  @media (min-width: $md) {
+    width: calc(58.333333vw + 30px);
+  }
+  @media (min-width: $lg) {
+    width: calc(50vw + 30px);
+  }
+}
+
+.header-half-bg .carousel-indicators {
+  @media (min-width: $md) {
+    left: calc(58.333333vw + 30px);
+  }
+  @media (min-width: $lg) {
+    left: calc(50vw + 30px);
+  }
+}*/
+/*
+// Stream header styles
+*/
+.header-stream {
+  .menu .container {
+    padding: 0;
+  }
+}
+
+.header__tel--stream {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header__tel--stream i {
+  font-size: 0.8em;
+  color: $color-prime;
+}
+
+.steam__contact-row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.header-stream__multi-tel-container {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.header-stream__multi-tel-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header-slogan-container-fix--stream {
+  position: relative;
+  top: initial;
+  bottom: 0;
+  height: auto;
+  background-color: $color-prime;
+}
+
+.header-slogan-row--stream {
+  padding-top: 0;
+}
+
+.header-slogan-col--stream {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.header__img--stream {
+  max-height: 720px;
+}
+
+.stream__add-links {
+  text-decoration: none;
+  color: $color-copy;
+}
+@media (max-width: 767px) {
+  .stream__social .social-ico-row {
+    justify-content: center;
+  }
+}
+@media (min-width: $lg) {
+  .header-slogan-container-fix--stream {
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .header-slogan-container-fix--stream::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-prime;
+    opacity: 0.90;
+  }
+}
+/*
+// Fluid header styles
+*/
+.header-fluid {
+  .menu .container {
+    padding: 0;
+  }
+
+  .full-menu > .menu-item {
+    font-size: $f7;
+    @media (min-width: $xx) {
+      font-size: $f6;
+    }
+  }
+  @media (min-width: $xl) {
+    .header__logo {
+      max-width: 300px;
+      object-fit: contain;
+    }
+  }
+}
+
+.header-fluid__contact-info {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.header-fluid .header__address::before,
+.header-fluid .header__email::before,
+.header-fluid .header__tel::before {
+  font-family: $icon;
+  font-weight: 900;
+  margin-right: 0.25em;
+}
+
+.header-fluid .header__address::before {
+  content: "\f3c5";
+}
+
+.header-fluid .header__email::before {
+  content: "\f0e0";
+}
+
+.header-fluid .header__tel::before {
+  content: "\f095";
+}
+@media (min-width: $sm) {
+  .header-fluid__contact-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: $xl) {
+  .header-fluid__contact-info {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .header-fluid__contact-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.header-fluid__cta.btn {
+  position: relative;
+  right: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  text-decoration: none;
+  background: $color-second;
+  color: $color-prime;
+  @media (min-width: $sm) {
+    left: initial;
+    width: auto;
+    height: 100%;
+  }
+  @media (min-width: $xl) {
+    padding: 0.65em 8.333333% 0.65em 1.5em;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    background: $color-tert;
+    color: $color-prime;
+  }
+}
+
+.header__logo--fluid {
+  width: 350px;
+}
+
+.header-slogan-container-fix--fluid {
+  top: initial;
+  bottom: 30px;
+  height: auto;
+}
+@media (min-width: $md) {
+  .header-slogan-container-fix--fluid {
+    bottom: 60px;
+  }
+}
+@media (min-width: $lg) {
+  .header-slogan-container-fix--fluid {
+    bottom: 90px;
+  }
+}
+@media (min-width: $xl) {
+  .header-slogan-container-fix--fluid {
+    bottom: 120px;
+  }
+}
+/*
+// Impact header styles
+*/
+.header-block--impact {
+  border-bottom: 6px solid $color-prime;
+  line-height: 1.2;
+}
+@media (min-width: $md) {
+  .header-block--impact {
+    border-bottom: 0;
+  }
+}
+
+.header-slogan-container--impact {
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+}
+
+.header-slogan-container--impact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: $color-prime;
+  opacity: 0.75;
+  @include layer-0;
+}
+
+.header-slogan-txt--impact {
+  margin-bottom: 0.5em;
+}
+@media (min-width: $xl) {
+  .header-slogan-container--impact {
+    padding: 60px 90px;
+  }
+}
+/*
+// Overlay header styles
+*/
+.home .header-overlay,
+.page-template-zblocks-page .header-overlay {
+  position: absolute;
+  width: 100%;
+}
+
+.header__address--overlay,
+a[href^="tel:"].header__tel--overlay {
+  color: #fff;
+}
+
+.header__free-consult--overlay {
+  outline: 4px solid transparent;
+  color: #fff;
+}
+
+.header__free-consult--overlay:focus,
+.header__free-consult--overlay:hover {
+  outline: 4px solid $color-prime;
+  background: $color-prime;
+  color: #fff;
+}
+
+.home .menu--overlay,
+.page-template-zblocks-page .menu--overlay {
+  background: transparent;
+}
+/*
+// Inside page header styles
+*/
+.header-inner-page {
+  position: relative;
+  background-color: $color-prime;
+  @include layer-0;
+}
+
+.header-inner-page__img {
+  position: relative;
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  @include layer-0;
+}
+
+.header-inner-page__content {
+  padding: 15px 0;
+  background-color: $color-quint;
+}
+
+.header-inner-page__title {
+  margin-bottom: 0;
+}
+@media (min-width: $sm) {
+  /*
+	// This will add a fade to the left side of the header - tweak the position and background color options for the text container to change the style
+	.header-inner-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.00) 80%);
+    @include layer-1;
+  }*/
+  .header-inner-page__content {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    @include layer-2;
+  }
+
+  .header-inner-page__title {
+    padding: 15px 0;
+    color: #fff;
+  }
+
+  .header-inner__title-container {
+    position: relative;
+    flex-grow: 1;
+  }
+}
+@media (min-width: $xl) {
+  .header-inner-page__content {
+    top: 0;
+    left: 0;
+  }
+
+  .header-inner-page__img {
+    height: 480px;
+  }
+
+  .position-xl-absolute {
+    position: absolute;
+  }
+
+  .position-xl-absolute .header-inner__title-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-prime;
+    opacity: 0.95;
+    @include layer-behind;
+  }
+}
+/*
+// Fixed Header Animation
+*/
+.header-block--fixed {
+  border-bottom: 6px solid $color-prime;
+  line-height: 1.2;
+}
+@media (min-width: $md) {
+  .header-block--fixed {
+    border-bottom: 0;
+  }
+}
+
+.fixed {
+  position: fixed !important;
+  top: -100%;
+  width: 100%;
+  padding-bottom: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.fixed-transition {
+  -webkit-animation-name: stick-up;
+  animation-name: stick-up;
+  -webkit-animation-duration: 0.45s;
+  animation-duration: 0.45s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes stick-up {
+  from {
+    top: -250px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+@keyframes stick-up {
+  from {
+    top: -250px;
+  }
+
+  to {
+    top: 0;
+  }
+}

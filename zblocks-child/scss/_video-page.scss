@@ -1,0 +1,15 @@
+.video-archive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+@media (min-width: $md) {
+  .video-archive-grid {
+    grid-gap: 60px;
+  }
+}
+@media (min-width: $lg) {
+  .video-archive-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
